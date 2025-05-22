@@ -16,9 +16,9 @@
   <header>
     <nav class="nav-container">
       <div class="nav-links">
-        <a href="#ceremony" class="nav-link" data-en="Ceremony" data-es="Ceremonia">Ceremony</a>
-        <a href="#travel" class="nav-link" data-en="Travel & Stay" data-es="Viaje y Estancia">Travel & Stay</a>
-        <a href="#registry" class="nav-link" data-en="Registry" data-es="Regalo de Boda" data-href-en="#registry" data-href-es="#regalo">Registry</a>
+        <a href="#" class="nav-link modal-trigger" data-modal="ceremonyModal" data-en="Ceremony" data-es="Ceremonia">Ceremony</a>
+        <a href="#" class="nav-link modal-trigger" data-modal="travelModal" data-en="Travel & Stay" data-es="Viaje y Estancia">Travel & Stay</a>
+        <a href="#" class="nav-link modal-trigger" data-modal="registryModal" data-en="Registry" data-es="Regalo de Boda">Registry</a>
       </div>
     </nav>
   </header>
@@ -34,7 +34,7 @@
       <div class="hero-content">
         <h1 class="main-heading">
           <span class="heading-line" data-en="We're Getting" data-es="¡Nos">We're Getting</span>
-          <span class="heading-line highlight" data-en="married" data-es="Casamos!">Married!</span>
+          <span class="heading-line highlight" data-en="Married" data-es="Casamos!">Married!</span>
         </h1>
         <div class="divider">
           <div class="divider-line"></div>
@@ -52,6 +52,90 @@
       </div>
     </section>
   </main>
+
+  <!-- Modal Components -->
+  <div class="modal" id="ceremonyModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 data-en="Ceremony" data-es="Ceremonia">Ceremony</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-letter">
+          <h3 data-en="Our Sacred Union" data-es="Nuestra Unión Sagrada">Our Sacred Union</h3>
+          <div class="modal-divider">
+            <div class="divider-line"></div>
+            <div class="divider-ornament">✦</div>
+            <div class="divider-line"></div>
+          </div>
+          <p data-en="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed non mauris vitae erat consequat auctor eu in elit. Donec eget risus diam. Curabitur ornare est a justo semper commodo." 
+             data-es="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed non mauris vitae erat consequat auctor eu in elit. Donec eget risus diam. Curabitur ornare est a justo semper commodo.">
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed non mauris vitae erat consequat auctor eu in elit. Donec eget risus diam. Curabitur ornare est a justo semper commodo.
+          </p>
+          <p data-en="Maecenas nulla ante, bibendum eget efficitur a, laoreet ut orci. Integer vulputate posuere diam, eu tristique nunc egestas vitae. Donec finibus augue eget justo molestie, et sagittis sem interdum. Vivamus nec nulla vitae nulla pharetra pulvinar." 
+             data-es="Maecenas nulla ante, bibendum eget efficitur a, laoreet ut orci. Integer vulputate posuere diam, eu tristique nunc egestas vitae. Donec finibus augue eget justo molestie, et sagittis sem interdum. Vivamus nec nulla vitae nulla pharetra pulvinar.">
+             Maecenas nulla ante, bibendum eget efficitur a, laoreet ut orci. Integer vulputate posuere diam, eu tristique nunc egestas vitae. Donec finibus augue eget justo molestie, et sagittis sem interdum. Vivamus nec nulla vitae nulla pharetra pulvinar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal" id="travelModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 data-en="Travel & Stay" data-es="Viaje y Estancia">Travel & Stay</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-letter">
+          <h3 data-en="Journey to Our Celebration" data-es="Viaje a Nuestra Celebración">Journey to Our Celebration</h3>
+          <div class="modal-divider">
+            <div class="divider-line"></div>
+            <div class="divider-ornament">✦</div>
+            <div class="divider-line"></div>
+          </div>
+          <p data-en="Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna." 
+             data-es="Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna.">
+             Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna.
+          </p>
+          <p data-en="Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh." 
+             data-es="Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.">
+             Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal" id="registryModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 data-en="Registry" data-es="Regalo de Boda">Registry</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-letter">
+          <h3 data-en="Celebrating Our New Beginning" data-es="Celebrando Nuestro Nuevo Comienzo">Celebrating Our New Beginning</h3>
+          <div class="modal-divider">
+            <div class="divider-line"></div>
+            <div class="divider-ornament">✦</div>
+            <div class="divider-line"></div>
+          </div>
+          <p data-en="Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper." 
+             data-es="Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper.">
+             Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper.
+          </p>
+          <p data-en="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam." 
+             data-es="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.">
+             Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal-overlay"></div>
 
   <!-- Language Switcher -->
   <footer>
@@ -98,6 +182,58 @@
           'Paula & Aodhán | 8 de Noviembre, 2025' : 
           'Paula & Aodhán | November 8, 2025';
       });
+      
+      // Modal functionality
+      const modalTriggers = document.querySelectorAll('.modal-trigger');
+      const modalOverlay = document.querySelector('.modal-overlay');
+      const closeButtons = document.querySelectorAll('.modal-close');
+      
+      // Open modal when trigger is clicked
+      modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const modalId = trigger.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
+          
+          if (modal) {
+            modal.classList.add('active');
+            modalOverlay.classList.add('active');
+            document.body.classList.add('modal-open');
+          }
+        });
+      });
+      
+      // Close modal when close button is clicked
+      closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const modal = button.closest('.modal');
+          closeModal(modal);
+        });
+      });
+      
+      // Close modal when clicking the overlay
+      modalOverlay.addEventListener('click', () => {
+        const activeModal = document.querySelector('.modal.active');
+        if (activeModal) {
+          closeModal(activeModal);
+        }
+      });
+      
+      // Close modal when ESC key is pressed
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const activeModal = document.querySelector('.modal.active');
+          if (activeModal) {
+            closeModal(activeModal);
+          }
+        }
+      });
+      
+      function closeModal(modal) {
+        modal.classList.remove('active');
+        modalOverlay.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      }
     });
   </script>
 </body>
