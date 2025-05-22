@@ -1,66 +1,32 @@
-# Mckay's App Template
+# Paula & Aodhán's Wedding Website
 
-This is a full-stack app template for courses on [Takeoff](https://JoinTakeoff.com/).
+A simple, elegant wedding website built with HTML and CSS.
 
-## Sponsors
+## Features
 
-If you are interested in sponsoring my repos, please contact me at [ads@takeoffai.org](mailto:ads@takeoffai.org).
-
-Or sponsor me directly on [GitHub Sponsors](https://github.com/sponsors/mckaywrigley).
-
-## Tech Stack
-
-- IDE: [Cursor](https://www.cursor.com/)
-- AI Tools: [V0](https://v0.dev/), [Perplexity](https://www.perplexity.com/)
-- Frontend: [Next.js](https://nextjs.org/docs), [Tailwind](https://tailwindcss.com/docs/guides/nextjs), [Shadcn](https://ui.shadcn.com/docs/installation), [Framer Motion](https://www.framer.com/motion/introduction/)
-- Backend: [PostgreSQL](https://www.postgresql.org/about/), [Supabase](https://supabase.com/), [Drizzle](https://orm.drizzle.team/docs/get-started-postgresql), [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
-- Auth: [Clerk](https://clerk.com/)
-- Payments: [Stripe](https://stripe.com/)
-- Analytics: [PostHog](https://posthog.com/)
-
-## Prerequisites
-
-You will need accounts for the following services.
-
-They all have free plans that you can use to get started.
-
-- Create a [Cursor](https://www.cursor.com/) account
-- Create a [GitHub](https://github.com/) account
-- Create a [Supabase](https://supabase.com/) account
-- Create a [Clerk](https://clerk.com/) account
-- Create a [Stripe](https://stripe.com/) account
-- Create a [PostHog](https://posthog.com/) account
-- Create a [Vercel](https://vercel.com/) account
-
-You will likely not need paid plans unless you are building a business.
-
-## Environment Variables
-
-```bash
-# DB (Supabase)
-DATABASE_URL=
-
-# Auth (Clerk)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/login
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/signup
-
-# Payments (Stripe)
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PORTAL_LINK=
-NEXT_PUBLIC_STRIPE_PAYMENT_LINK_YEARLY=
-NEXT_PUBLIC_STRIPE_PAYMENT_LINK_MONTHLY=
-
-# Analytics (PostHog)
-NEXT_PUBLIC_POSTHOG_KEY=
-NEXT_PUBLIC_POSTHOG_HOST=
-```
+- Elegant, timeless Catholic romantic aesthetic
+- Full-screen background image
+- Responsive design that works on all devices
+- Navigation with links to key information
+- Hero section with wedding details
+- RSVP link to Google Form
+- Bilingual support (English/Spanish)
+- Language toggle with flag indicators
 
 ## Setup
 
-1. Clone the repository
-2. Copy `.env.example` to `.env.local` and fill in the environment variables from above
-3. Run `npm install` to install dependencies
-4. Run `npm run dev` to run the app locally
+1. Clone or download this repository
+2. Make sure your church sketch image is saved as "hero.png" in the root directory
+3. Add a church image as "church.webp" in the root directory
+4. Open index.html in your browser
+
+## Customization
+
+- To change the background image, replace the hero.png file with your preferred image
+- To change the church image, replace church.webp with your preferred image
+- To modify translations, edit the data-en and data-es attributes in index.html
+- To change links, modify the href attributes or data-href-en/data-href-es attributes
+
+## Credits
+
+Created for Paula & Aodhán's wedding on November 8, 2025 in Galway, Ireland. 

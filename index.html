@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paula & Aodhán | November 8, 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-overlay"></div>
+  
+  <!-- Navigation -->
+  <header>
+    <nav class="nav-container">
+      <div class="nav-links">
+        <a href="#ceremony" class="nav-link" data-en="Ceremony" data-es="Ceremonia">Ceremony</a>
+        <a href="#travel" class="nav-link" data-en="Travel & Stay" data-es="Viaje y Estancia">Travel & Stay</a>
+        <a href="#registry" class="nav-link" data-en="Registry" data-es="Regalo de Boda" data-href-en="#registry" data-href-es="#regalo">Registry</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Church Image -->
+  <div class="church-image-container">
+    <img src="church.webp" alt="Wedding Church" class="church-image" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e9e5dc/4A5D32?text=Church+Image'; this.classList.add('placeholder-image');">
+  </div>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-container">
+      <div class="hero-content">
+        <h1 class="main-heading">
+          <span class="heading-line" data-en="We're Getting" data-es="¡Nos">We're Getting</span>
+          <span class="heading-line highlight" data-en="married" data-es="Casamos!">Married!</span>
+        </h1>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-ornament">✦</div>
+          <div class="divider-line"></div>
+        </div>
+        <div class="details-container">
+          <h2 class="couple-names">Paula & Aodhán</h2>
+          <p class="wedding-date" data-en="November 8, 2025" data-es="8 de Noviembre, 2025">November 8, 2025</p>
+          <p class="wedding-location" data-en="Galway, Ireland" data-es="Galway, Irlanda">Galway, Ireland</p>
+        </div>
+        <div class="rsvp-container">
+          <a href="https://forms.gle/E7DHv6vTXBjvpgtR6" target="_blank" rel="noopener noreferrer" class="rsvp-button" data-en="RSVP" data-es="RSVP">RSVP</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Language Switcher -->
+  <footer>
+    <div class="language-switcher-container">
+      <div class="language-switcher">
+        <span class="language-option">🇬🇧</span>
+        <label class="switch">
+          <input type="checkbox" id="languageToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="language-option">🇪🇸</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Page load animation
+      setTimeout(() => {
+        document.body.classList.add('loaded');
+      }, 100);
+      
+      // Language toggle functionality
+      const languageToggle = document.getElementById('languageToggle');
+      const translatableElements = document.querySelectorAll('[data-en][data-es]');
+      const htmlElement = document.documentElement;
+      
+      languageToggle.addEventListener('change', function() {
+        const language = this.checked ? 'es' : 'en';
+        htmlElement.setAttribute('lang', language);
+        
+        // Update all translatable elements
+        translatableElements.forEach(element => {
+          element.textContent = element.getAttribute(`data-${language}`);
+          
+          // Also update href attributes if they exist for this language
+          if (element.hasAttribute(`data-href-${language}`)) {
+            element.setAttribute('href', element.getAttribute(`data-href-${language}`));
+          }
+        });
+        
+        // Update page title
+        document.title = language === 'es' ? 
+          'Paula & Aodhán | 8 de Noviembre, 2025' : 
+          'Paula & Aodhán | November 8, 2025';
+      });
+    });
+  </script>
+</body>
+</html> 
