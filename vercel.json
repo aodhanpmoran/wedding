@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "outputDirectory": ".",
+  "buildCommand": "echo 'No build step required'",
+  "framework": null
+} 
