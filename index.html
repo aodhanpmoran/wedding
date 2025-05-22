@@ -212,6 +212,10 @@
         document.body.classList.add('loaded');
       }, 100);
       
+      // Hide registry nav item by default (English is default)
+      const registryNavItem = document.querySelector('[data-modal="registryModal"]');
+      registryNavItem.style.display = 'none';
+      
       // Language toggle functionality
       const languageToggle = document.getElementById('languageToggle');
       const translatableElements = document.querySelectorAll('[data-en][data-es]');
@@ -220,6 +224,16 @@
       languageToggle.addEventListener('change', function() {
         const language = this.checked ? 'es' : 'en';
         htmlElement.setAttribute('lang', language);
+        
+        // Get registry nav item
+        const registryNavItem = document.querySelector('[data-modal="registryModal"]');
+        
+        // Show/hide registry nav item based on language
+        if (language === 'es') {
+          registryNavItem.style.display = 'block';
+        } else {
+          registryNavItem.style.display = 'none';
+        }
         
         // Update all translatable elements
         translatableElements.forEach(element => {
