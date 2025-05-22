@@ -1,0 +1,28 @@
+{
+  "name": "paula-aodhan-wedding",
+  "version": "1.0.0",
+  "description": "Paula and Aodhán's Wedding Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build step required'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aodhanpmoran/wedding.git"
+  },
+  "keywords": [
+    "wedding",
+    "website",
+    "html",
+    "css"
+  ],
+  "author": "Aodhán Moran",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
