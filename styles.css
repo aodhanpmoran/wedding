@@ -868,4 +868,28 @@ body.modal-open {
     width: 150px;
     margin: 0.8rem auto 1.2rem;
   }
+}
+
+/* Desktop-only: Center modal section headings */
+@media (min-width: 769px) {
+  .modal-letter h3[style*="color: #4A5D32"] {
+    text-align: center;
+  }
+  
+  /* Center modal header text on desktop */
+  .modal-header {
+    justify-content: center;
+    position: relative;
+  }
+  
+  .modal-header h2 {
+    text-align: center;
+  }
+  
+  .modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 } 
