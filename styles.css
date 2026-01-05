@@ -333,6 +333,20 @@ main {
   margin-bottom: 0;
 }
 
+/* Thank You Message */
+.thank-you-message {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  color: var(--stone);
+  line-height: 1.9;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .heading-line {
@@ -379,17 +393,25 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  .thank-you-message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 0 1rem;
+  }
+}
+
 @media (max-width: 480px) {
   :root {
     --page-padding: 2rem;
   }
-  
+
   body, html {
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
   }
-  
+
   .hero-container,
   .nav-container,
   .church-image-container,
@@ -402,41 +424,47 @@ main {
     overflow-x: hidden;
     box-sizing: border-box;
   }
-  
+
   .nav-container {
     padding: 0 0.5rem;
   }
-  
+
   .nav-links {
     gap: 0.8rem;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .nav-link {
     font-size: 0.9rem;
     letter-spacing: 0.06em;
     padding: 0.3rem 0.4rem;
   }
-  
+
   .heading-line {
     font-size: 2rem;
   }
-  
+
   .heading-line.highlight {
     font-size: 3rem;
   }
-  
+
   .couple-names {
     font-size: 1.8rem;
   }
-  
+
   .divider {
     margin: 0.9rem 0;
   }
-  
+
   .divider-line {
     width: 40px;
+  }
+
+  .thank-you-message {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding: 0 0.5rem;
   }
 
   .church-image-container {
@@ -868,7 +896,7 @@ body.modal-open {
     width: 150px;
     margin: 0.8rem auto 1.2rem;
   }
-}
+} 
 
 /* Desktop-only: Center modal section headings */
 @media (min-width: 769px) {
