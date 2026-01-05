@@ -13,20 +13,14 @@
 <body>
   <div class="background-overlay"></div>
   
-  <!-- Navigation -->
-  <header>
-    <nav class="nav-container">
-      <div class="nav-links">
-        <a href="#" class="nav-link modal-trigger" data-modal="ceremonyModal" data-en="Ceremony" data-es="Ceremonia">Ceremony</a>
-        <a href="#" class="nav-link modal-trigger" data-modal="travelModal" data-en="Travel & Stay" data-es="Viaje y Estancia">Travel & Stay</a>
-        <a href="#" class="nav-link modal-trigger" data-modal="registryModal" data-en="Registry" data-es="Regalo de Boda">Registry</a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Church Image -->
+  <!-- Wedding Image -->
   <div class="church-image-container">
-    <img src="church.webp" alt="Wedding Church" class="church-image" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e9e5dc/4A5D32?text=Church+Image'; this.classList.add('placeholder-image');">
+    <img src="wedding.jpg" alt="Paula & Aodhán's Wedding" class="church-image" id="weddingPhoto" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e9e5dc/4A5D32?text=Wedding+Photo'; this.classList.add('placeholder-image');">
+  </div>
+
+  <!-- Image Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img src="wedding.jpg" alt="Paula & Aodhán's Wedding" class="lightbox-image">
   </div>
 
   <!-- Hero Section -->
@@ -223,17 +217,14 @@
       const languageToggle = document.getElementById('languageToggle');
       const translatableElements = document.querySelectorAll('[data-en][data-es]');
       const htmlElement = document.documentElement;
-        const registryNavItem = document.querySelector('[data-modal="registryModal"]');
-        
+
       // Function to apply language changes
       function applyLanguage(chosenLang) {
         htmlElement.setAttribute('lang', chosenLang);
 
         if (chosenLang === 'es') {
-          registryNavItem.style.display = 'block';
           document.title = 'Paula & Aodhán | Gracias';
         } else { // Default to 'en'
-          registryNavItem.style.display = 'none';
           document.title = 'Paula & Aodhán | Thank You';
         }
         
@@ -263,6 +254,27 @@
         languageToggle.checked = false; // Ensure toggle state is for English
         applyLanguage('en');          // Apply English (default behavior)
       }
+
+      // Lightbox functionality
+      const weddingPhoto = document.getElementById('weddingPhoto');
+      const lightbox = document.getElementById('lightbox');
+
+      weddingPhoto.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        document.body.classList.add('modal-open');
+      });
+
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          lightbox.classList.remove('active');
+          document.body.classList.remove('modal-open');
+        }
+      });
       
       // Modal functionality
       const modalTriggers = document.querySelectorAll('.modal-trigger');
